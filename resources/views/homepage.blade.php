@@ -40,8 +40,8 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-5 col-xs-5" style="padding-left: 0px; padding-right: 0px;">
-                <img src="{!!asset('images/landing.png')!!}" class="img-responsive landing_img" style="height:700px; width: 520px;">
+            <div class="col-sm-5 col-xs-5" style="padding-top: 15px;">
+                <img src="{!!asset('images/landing.png')!!}" class="img-responsive landing_img" style="height:650px; width: 520px; border-radius: 10px; ">
             </div>
             <div class="col-sm-7 col-xs-7"> 
                 <nav class="navbar navbar-default">
@@ -96,13 +96,10 @@
                 <p class="section"> Order Taking and Customer Ordering services </p>
                  <!--<button class="btn Store"><img src="images/apple.png">&nbsp; &nbsp; App Store</button>
                 <button class="btn Store" style="display: inline; margin-top: 0px;"><img src="images/android.png">&nbsp; &nbsp; Play Store</button> -->
-                <img src="images/appstore.png" class="img-responsive" style="height: 45px; ">
-                <img src="images/downarrow.png" style="float: right; height: 25px; display: inline; margin-top: 6%; padding-right: 2%;">
+                <img src="images/appstore.png" class="img-responsive" style="height: 45px;  margin-top: 7%; display: inline;">
+                <img src="images/downarrow.png" style="float: right; height: 25px; display: inline; margin-top: 9%; padding-right: 2%;">
             </div>
-        </div>
-        <div class="row">
-            <hr style="height: 4px; background-color: #f1e3e3; margin: 0;">
-        </div>      
+        </div>     
         <div class="sec2">
             <img src="images/bookmark.png" class="img-responsive bookmark">
             <p>
@@ -114,17 +111,16 @@
             </p>
             <h4 style="padding-top: 23%; font-weight: bolder;">Products <img src="images/downarrow.png" class="img-responsive" width="20px" height="20px" style="display: inline; margin-left: 7px; height: 25px;"></h4>
         </div>
-        <div class="row">
-            <hr style="height: 4px; background-color: #f1e3e3; margin: 0;">
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-xs-12 sec3_1">
+        
+        <div class="row" style="padding: 0 15px 15px 15px ; ">
+            
+            <div class="col-sm-6 col-xs-12 sec3_1" style="margin-right: 50px; margin-left: 40px; border-radius: 15px; width: 45%;">
                 <div id="sec3_p1">
                     <h2 style="padding-top: 43%;"><b>Placing Orders</b></h2>
                     <h2 style="margin: 0; font-weight: bolder;"><b>#smartphoneordering</b></h2>
                 </div>
-                <div id="sec3_p1_h" style="display: none;">
-                    <div class="sec3_layer">
+                <div id="sec3_p1_h" style="display: none; ">
+                    <div class="sec3_layer" style="border-radius: 15px;">
                         <img src="images/mac_silver.png" class="img-responsive" style=" margin:0 auto; height: 36px; margin-bottom: 3%;">
                         <h4 >Place orders at your own convenience.</h4>
                         <h4 style="margin: 0; ">#notforhomedelivery</h4>                    
@@ -135,7 +131,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-xs-12 sec3_2">
+
+            <div class="col-sm-6 col-xs-12 sec3_2" style="border-radius: 15px;  width: 45%;">
                 <div id="sec3_p2">                  
                     <h2  style="padding-top: 43%; font-weight: bolder;"><b>Taking Orders *</b></h2>
                     <h2 style="margin: 0; "><b>#handheldPOS</b></h2>
@@ -144,7 +141,7 @@
                     </h4>
                 </div>
                 <div id="sec3_p2_h" style="display: none;">
-                    <div class="sec3_layer">
+                    <div class="sec3_layer" style="border-radius: 15px;">
                         <img src="images/android_silver.png" class="img-responsive" style=" margin: 0 auto; height: 36px; margin-bottom: 3%;">
                         <h4 style="line-height: 24px;">Just <b>type and enter</b> to take customer orders.<br>
                         Its lightning fast and connected to your POS.<br>
@@ -155,9 +152,9 @@
                     </div>
                 </div>
             </div>
-
+            
         </div>
-        <div class="row" style="background-color: #778899;">
+        <div class="row" style="background-color: #778899; ">
             <div class="col-sm-1 col-xs-2 add">                         
                 <p class="vertical-text"><b></span>Add-ons for restaurants</b></p>
                 <!-- <span class="glyphicon glyphicon-star star-bottom"> -->
@@ -202,13 +199,7 @@
             <h3>#serviceapp</h3>
             <p>Handle floor operations in the most efficient manner .</p>
         </div>
-        <div class="google_play">
-            <h4>
-                Its available on Google Play Store
-            </h4>
-            <img src="images/google.png" class="img-responsive" style="height: 45px; margin: auto;">
-            <!-- <button class="btn" style="border-radius: 10px; padding-left: 2%; padding-right: 2%;"><img src="images/android.png" class="img-responsive" style="display: inline; padding: 1% 2%;">Play Store</button> -->
-        </div>
+       
         <div class="row how">
             <h2>How it works?</h2>
             <img src="images/clipboard.png" class="img-responsive" style="margin: auto; height: 100px; margin-top: 3%;"> 
@@ -237,19 +228,19 @@
             “What we propose to restaurants, is having a mix of both worlds (Manual & <br>Smartphone ordering) for the customer.”
         </div>
         <div class="movies">
-            <img src="images/round_logo.png" class="img-responsive" style="width: 65px; border-radius: 100%; margin: auto; border: 2px solid #e2e2e2;
+            <img src="images/round_logo.png" class="img-responsive" style="width: 75px; border-radius: 100%; margin: auto; border: 2px solid #e2e2e2;
     background-color: #e2e2e2;">
-            <h4>Other industries where afewtaps would be a natural fit:</h4>
+            <p style="padding-top: 2%;">Other industries where afewtaps would be a natural fit:</p>
             <h2>at the movies!</h2>
             <img src="images/movies.png" class="img-responsive" style="height: 200px; margin: auto;">
-            <h4 style="padding-top: 2%;">Place orders at the comforts of your seat, while watching movies.</h4>
+            <p style="padding-top: 2%;">Place orders at the comforts of your seat, while watching movies.</p>
             <p ><i class="fa fa-star" style="font-size: 20px;" aria-hidden="true"></i></p>
-            <h4>Have multiple POS counters, to handle more customers during interval.</h4>
-            <div class="container" style="padding: 2%; border:1px solid #000; width: 70%; border-radius: 5px; margin-top: 2%; font-size: 20px;">
+            <p>Have multiple POS counters, to handle more customers during interval.</p>
+            <div class="container" style="padding: 2%; background-color: #000; width: 70%; border-radius: 5px; margin-top: 2%; font-size: 18px; color: #fff;">
                 <b>Email us</b> your interest and we’ll propose how our product can work best for you.
             </div>
         </div>
-        <div class="buisness row">
+        <div class="buisness">
             <div class="layer">
                 <img src="images/bp.png" class="img-responsive" style="margin: auto; height: 70px">
                 <h1 style="text-align: center; ">afewtaps - Business</h1>
@@ -297,22 +288,27 @@
         </div>
         <div class="insta row">
             <img src="images/insta.png" class="img-responsive" style="margin: auto; width: 40px;">
-            <div class="row" style="padding-bottom: 5%; padding-top: 2%;">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-1">
-                    <img src="images/logo.png" class="img-responsive" style="width: 50px; border-radius: 25px; border:1px solid #000;">
-                </div>
-                <div class="col-sm-1">
-                    <h3>
+            <div class="container" style="padding-top: 3%; padding-bottom: 3%; padding-left: 35%;">
+                <ul  class="insta_ul" style="list-style: none; margin: auto;">
+                
+                <li >
+                    <img src="images/logo.png" class="img-responsive" style="width: 50px; border-radius: 25px; border:1px solid #dcd7d7; margin: auto;">
+                </li>
+                <li>
+                    <h3 style="margin-top: 10px;">
                             afewtaps
                         </h3>
-                </div>
-                <div class="col-sm-2">
-                    <a href="https://www.instagram.com/afewtaps/"><img src="images/follow.png" class="img-responsive" style="height: 46px; vertical-align: middle; padding-left: 2%;">
-                </div>
-                <div class="col-sm-4"></div>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/afewtaps/"><button style="color: #1cc1ea; padding: 5% 15%; background-color: transparent; border-radius: 15px; box-shadow: none; width: 125px; border:1px solid #1cc1ea;">
+                        <img src="images/plus.png" style="width: 20px; display: inline;" class="img-responsive">&nbsp; &nbsp;<span style="font-size: 18px; padding-top: 1%;">Follow</span>
+                    </button>
+                </li>
+                
+            </ul>
             </div>
-                <?php
+               <div class="container">
+                   <?php
                     // use this instagram access token generator http://instagram.pixelunion.net/
                     $access_token="2294090364.1677ed0.77254c412f0343b1a7b9b763358720be";
                     $photo_count=6;
@@ -347,16 +343,17 @@
                         echo "</div>";
                     }
                     ?>
+               </div> 
                    
         </div>
-        <div class="homepage_footer row">
+        <div class="homepage_footer">
             <div class="layer">
                 <img src="images/fb.png" class="img-responsive" style="margin: auto; height: 70px;">            
-                <h1 style="text-align: center; color: #fff; padding-top: 17%;">
+                <h1 style="text-align: center; color: #fff; padding-top: 17%; margin-bottom: 0; ">
                     A Delhi based startup @work.
                 </h1>
-                <p style="text-align: center; color: #fff; "><b>
-                    Copyright &copy; 2017 Think Different Technologies (P) Ltd</b>
+                <p style="text-align: center; color: #dcdcdc; ">
+                    Copyright &copy; 2017 Think Different Technologies (P) Ltd
                 </p>
                 <div style="color: #fff; padding-top:17%; font-family: 'Myriad Pro';">
                     <div class="col-sm-6">

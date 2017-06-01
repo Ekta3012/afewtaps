@@ -167,7 +167,7 @@ ul
 	padding-right: 0px;
 	background-image: url('/images/girl_table.png');
 	background-repeat:no-repeat;
-	background-position: center;
+	background-position: 100% 100%;
 	background-size:cover;
 	height: 680px;	
 }
@@ -180,7 +180,7 @@ ul
 	padding-right: 0px;
 	background-image: url('/images/mobile_order.png');
 	background-repeat:no-repeat;
-	background-size:cover;
+	background-size:100% 100%;
 	height: 680px;
 }
 #sec3_p1{
@@ -310,7 +310,7 @@ ul
 }
 .how{
 	text-align: center;
-	background-color:#EBEEF0;
+	
 	padding: 6%;
 }
 .how p{
@@ -335,20 +335,30 @@ ul
 	text-align: center;
 	padding: 3%;
 }
+.movies p{
+	font-size: 16px;
+}
 .buisness{
 	background-image: url('/images/industry.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #fff;
+	border-radius: 20px;
+}
+.insta_ul li{
+	float: left;
+	padding-right: 2%;
 }
 .layer{
 	background: rgba(0,0,0,0.5);
 	padding-top: 5%;
 	padding-bottom: 4%;
+	border-radius: 20px;
 }
 .layer_white{
 	padding-top: 5%;
 	padding-bottom: 5%;
+
 }
 span.sqr{
 	 width: 50vw;
@@ -364,8 +374,10 @@ span.sqr{
 }
 .homepage_footer{
 	background-image: url('/images/space-desk-workspace-coworking.jpg');
-	background-size: cover;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	border-radius: 20px;
+	margin-bottom: 15px;
 }
 #form{
 	padding: 5%;
@@ -397,11 +409,14 @@ span.sqr{
 	border-radius: 0px; 
 	box-shadow: none;
 }
-.feedback_input_box input{
+.feedback_input_box input,.feedback_input_box textarea{
 	border:0px; 
 	border-bottom: 2px solid #fff; 
 	border-radius: 0px; 
 	box-shadow: none;
+}
+.feedback_input_box input::placeholder,.feedback_input_box textarea::placeholder{
+	padding-bottom: 0;
 }
 .input_box .form-control{
 	text-align: center;
@@ -418,6 +433,8 @@ span.sqr{
 	background-color: transparent;
 	padding-bottom: 6%;
 	padding-top: 6%;
+	width: 400px;
+	margin: auto;
 }
 .feedback_input_box_submit{
 	margin-top: 8%;
@@ -454,7 +471,7 @@ span.sqr{
 }
 .Feedback{
 	background-image: url('/images/feedback.jpg');
-	background-size: cover;
+	background-size: 100% 78%;
 	background-repeat: no-repeat;
 	text-align: center;
 	color: #fff;
@@ -488,8 +505,9 @@ span.sqr{
 	padding-top: 3%;
 }
 .item_box{
-    height:500px;
+    height:450px;    
 }
+
  
 .photo-thumb{
     width:100%;
@@ -498,4 +516,5 @@ span.sqr{
     border: thin solid #d1d1d1;
     margin:0 1em .5em 0;
     float:left; 
+    border-radius: 10px;
 }

@@ -5,7 +5,7 @@
  */
 
 namespace App\Http\Controllers;
-
+use Mail;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -43,5 +43,21 @@ class HomeController extends Controller
 				'message' => 'Please run command <code>php artisan db:seed</code> to generate required table data.',
 			]);
 		}
+    }
+
+    public function sendEmail(Request $request)
+    {
+        $from = $request->input('email_id');
+        $name=$request->input('name');
+        //dd($name);
+        $feedback=$request->input('feedback');
+
+
+        Mail::send('email_feedback/confirmation', ['name' => $name, 'feedback' => $feedback], function ($m) use ($from) { 
+            $m->sender($from, '')->subject('Feedback@afewtaps');
+
+            $m->to('ekta30121995@gmail.com', 'Ekta Tiwari');
+        });
+        return view('feedback');
     }
 }

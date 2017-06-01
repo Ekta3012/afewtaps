@@ -86,4 +86,20 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Faqs ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/faqs', 'LA\FaqsController');
 	Route::get(config('laraadmin.adminRoute') . '/faq_dt_ajax', 'LA\FaqsController@dtajax');
+
+	/* ================== Privacies ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/privacies', 'LA\PrivaciesController');
+	Route::get(config('laraadmin.adminRoute') . '/privacy_dt_ajax', 'LA\PrivaciesController@dtajax');
+
+	/* ================== Privacies ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/privacies', 'LA\PrivaciesController');
+	Route::get(config('laraadmin.adminRoute') . '/privacy_dt_ajax', 'LA\PrivaciesController@dtajax');
+
+	/* ================== Terms ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/terms', 'LA\TermsController');
+	Route::get(config('laraadmin.adminRoute') . '/term_dt_ajax', 'LA\TermsController@dtajax');
+
+	/* ================== Terms ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/terms', 'LA\TermsController');
+	Route::get(config('laraadmin.adminRoute') . '/term_dt_ajax', 'LA\TermsController@dtajax');
 });

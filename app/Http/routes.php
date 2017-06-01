@@ -32,6 +32,8 @@ Route::get('/career', function () {
 Route::get('/feedback', function () {
     return view('feedback');
 });
+Route::post('/feedback/mail', ['as' => 'feedback.mail','uses' => 'HomeController@sendEmail']);
+
 Route::get('/faq', 'LA\FaqsController@view');
 /* ================== Homepage + Admin Routes ================== */
 

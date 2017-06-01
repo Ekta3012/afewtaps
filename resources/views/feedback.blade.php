@@ -16,11 +16,30 @@
 	<script src="https://use.fontawesome.com/5cd91b09e0.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/stylesheet.css') }}">
-   
+   	<style type="text/css">
+   		.form-control:focus{
+   			box-shadow: none;
+   		}
+   		input:-webkit-autofill{
+   			background-color: transparent;
+   		}
+   		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  text-align: bottom;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+		 padding-bottom: 0;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+		  padding-bottom: 0;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+		  padding-bottom: 0;
+		}
+   	</style>
 </head>
 <body>
 	<div class="container-fluid Feedback">
-		<div class="layer_white">
+		<div class="layer_white" style="padding-bottom: 0;">
 			<img src="images/chat.png" class="img-responsive" style="margin: auto; display: inline; padding-right: 1%; height: 50px;">
 			<h1 style="display: inline; vertical-align: middle;">Feedback</h1>
 			<p style="font-size: 19px; padding: 1% 0%;">
@@ -28,7 +47,7 @@
 				Share your experience with afewtaps.
 			</p>
 			<div id="feedback_form" class="container">
-				<form>
+				{{ Form::open(array('route' => 'feedback.mail')) }}
 					<div class="feedback_input_box">
 						<input type="text" name="name" placeholder="Name" class="form-control">
 					</div>
@@ -36,33 +55,36 @@
 						<input type="text" name="email_id" placeholder="Email ID" class="form-control">
 					</div>
 					<div class="feedback_input_box">
-						<input type="text" name="feedback" placeholder="Feedback" class="form-control">
+						<textarea  cols="4" rows="3" placeholder="Feedback" class="form-control">						</textarea> 
 					</div>
-					<div class="feedback_input_box_submit">
+					<div class="feedback_input_box_submit" style="padding-top: 8%;">
 						<input type="submit" name="submit" style="background-color: #8eac7a; color: #fff; font-weight: bolder;     margin: auto;  font-size: 17px; border-radius: 5px; text-transform: uppercase; padding: 2% 8%; border:none;">
 					</div>	
-				</form>
+				{{ Form::close() }}
 			</div>
 		</div>
-		<div class="row footer" style="margin-left: 0; margin-right: 0;">
+		<div class="footer">
+			<div class="row">
 			<div class="col-sm-6" style="text-align: left;">
-				<h4>ABOUT US</h4>
+				<h4><b>ABOUT US</b></h4>
 				<p>A startup, aiming to create</p>
 				<p>disruption in the food service technology space.</p>
 				<p>We pledge to make food service <b>world class...</b></p>
 			</div>
 			<div class="col-sm-6" style="text-align: right;">
 				<ul style="list-style: none;">
-					<li><a href="career.html" style="text-decoration: none; color: #fff;">Career</a></li>
-					<li>FAQ</li>
-					<li><a href="blog.html" style="text-decoration: none; color: #fff;">Blog</a></li>
-					<li><a href="feedback.html" style="text-decoration: none; color: #fff;">Feedback</a></li>
-					<li>Privacy</li>
-					<li>Terms</li>
-				</ul>
-				<p>Copyright © 2017 Think Different Technologies (P) Ltd</p>
+			        <li><a href="{!! url('/career'); !!}" style="text-decoration: none; color: #fff;">Career</a></li>
+			        <li><a href="{!! url('/faq'); !!}" style="text-decoration: none; color: #fff;">FAQ</li>
+			        <li><a href="{!! url('/blog'); !!}" style="text-decoration: none; color: #fff;">Blog</a></li>
+			        <li><a href="{!! url('/feedback'); !!}" style="text-decoration: none; color: #fff;">Feedback</a></li>
+			        <li>Privacy</li>
+			        <li>Terms</li>
+			      </ul>
+				<p style="font-size: 13px;">Copyright © 2017 Think Different Technologies (P) Ltd</p>
 			</div>
-		</div>	
+		</div>
+		</div>
+				
 	</div>
 </body>
 </html>
