@@ -21,15 +21,15 @@
 <body>
 	<div class="container-fluid">
 		<div class="row" style="padding: 3%;">
-			<div class="col-sm-6">
+			<div class="col-sm-5">
 				<img src="images/tablet.png" class="img-responsive" style="display: inline; height: 450px;">
 				<img src="images/phone.png" class="img-responsive" style="display: inline; height: 450px; margin-left:-109px; margin-bottom: -50px; ">
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-7">
 				<h1>afewtaps - Service App</h1>
-				<h4>Take Orders. Receive orders.</h4>
-				<h4 style="padding-bottom: 1%;">POS Entry. Speed of Service.</h4>
-				<p style="color: #a5a3a3; letter-spacing: 1px;">Take customer orders online, with one-tap POS entry.</p>
+				<p style="margin-bottom: 0;">Take Orders. Receive orders.</p>
+				<p style="padding-bottom: 1%;">POS Entry. Speed of Service.</p>
+				<p style="color: #a5a3a3; letter-spacing: 1px; margin-bottom: 0;">Take customer orders online, with one-tap POS entry.</p>
 				<p style="color: #a5a3a3; letter-spacing: 1px;">This ensures no time is lost during service.</p>
 				<hr style="margin-top: 4%; margin-bottom: 4%; height: 4px; background-color:#EBEEF0; ">
 				<h4 style="color: #a5a3a3;">Service App use.</h4>
@@ -130,7 +130,7 @@
 				</div>
 			</div>
 		<div style="color: #0080FF; padding: 2% 1%; vertical-align: middle;">
-			<p style=" display: inline;">Some of our <b>concepts</b> during service </p><span><i id="plus" class="fa fa-plus-circle" aria-hidden="true" style="color: #0080FF; font-size: 30px;"></i></span>
+			<p style=" display: inline;">Some of our <b>concepts</b> during service </p><span><i id="plus" class="fa fa-plus-circle" aria-hidden="true" style="color: #0080FF; font-size: 20px;"></i></span>
 		</div>
 		<div class="built-in">
 			<div>

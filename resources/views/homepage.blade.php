@@ -65,16 +65,111 @@
                                 <li><img src="images/web_d.png" style="height: 35px; " >Web Dashboard</li>
                             </ul>
                           </li>
-                          <li><a href="#">at the movies!</a></li>
-                          <li><a href="#">How it works?</a></li>
-                          <li><a href="#">Buisness</a></li>
+                          <li><a href="#movies">at the movies!</a></li>
+                          <li><a href="#how">How it works?</a></li>
+                          <li><a href="#buisness">Buisness</a></li>
                           <li><a href="https://www.instagram.com/afewtaps/" style="padding:11px 17px;"><img src="images/insta.png" class="img-responsive" width="30px" height="30px"></a></li>
-                          <li><a href="#" style="padding:11px 17px;"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-                          <li><a href="{{ url(config('laraadmin.adminRoute')) }}" style="padding:11px 17px;"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                          <li><a href="mailto:info@afewtaps.com" style="padding:11px 17px;"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                          <li><a href="#" style="padding:11px 17px;" data-toggle="modal" data-target="#myModal"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                         </ul>
                      </div>
                   </div>
-                </nav>              
+                </nav> 
+                <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header" style="background-color:#161616;">
+                      <button type="button" class="close" data-dismiss="modal">x</button>
+                      <h4 class="modal-title" style="color:#f6f6f6;font-weight:bold;">Sign In Here</h4>
+                    </div>
+                    <div class="modal-body">
+                    <div class="conatiner">
+                    <div class="row">
+                      <div class="col-md-6">
+                      <img src="images/admin.png" class="img-responsive center-block">
+                      <p style="text-align:center;color:black;">Admin Dashboard</p>
+                      <p style="text-align:center;color:#003d59;"><a target="_blank" href="{{ url(config('laraadmin.adminRoute')) }}">Login</a></p>
+                      
+                      </div>
+                      <div class="col-md-6">
+                      <img src="images/ed.png" class="img-responsive center-block">
+                        <p style="text-align:center;color:black;">Establishment Dashboard</p>
+                        <p style="text-align:center;color:#003d59;"><a target="_blank" href="#">Login</a>
+                      </p>                   
+                      </div>
+                      </div>
+                      <div class="row">                                    
+                        <!-- <form action="#" id="signup" class="form-horizontal" method="post" accept-charset="utf-8" onsubmit="return validation();"> -->
+                         {{ Form::open(array('route' => 'establishmentLogin','onsubmit' => 'return validation();')) }}   
+                            <p class="text-center" style="color:#333"><strong>New Establishment? Signup here</strong></p>
+                            <p class="msginfo" id="msginfo"></p>
+                           
+                            <div class="form-group row">
+                            <label class="col-sm-3 control-label">Name</label>
+                                <div class="col-sm-8">
+                                   <input name="name" value=""  class="form-control" placeholder="Name" type="text" id="name" autocomplete="off" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                            <div class="form-group row">
+                            <label class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-8">
+                                   <input name="email" value="" class="form-control" placeholder="Email" type="text" id="email" autocomplete="off" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                            <div class="form-group row">
+                            <label class="col-sm-3 control-label">Mobile No</label>
+                                <div class="col-sm-8">
+                                   <input name="mobile" value="" class="form-control" placeholder="Mobile No" type="text" id="mobile" autocomplete="off" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                            <div class="form-group row">
+                            <label class="col-sm-3 control-label">Address</label>
+                                <div class="col-sm-8">
+                                   <textarea name="address" value="" class="form-control" placeholder="Address" id="address" autocomplete="off"></textarea>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                            <div class="form-group row">
+                            <label class="col-sm-3 control-label">Captcha</label>
+                                <div class="col-sm-8" id="captchacontainer">
+                                   
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                            <div class="form-group row">
+                            <label class="col-sm-3 control-label">&nbsp;</label>
+                                <div class="col-sm-8">
+                                   <input name="captcha" value="" class="form-control" placeholder="Type number shown in above" type="text" id="captcha" autocomplete="off" />
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <div class="col-sm-4 col-sm-offset-4">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                            
+                        {{ Form::close() }}                                
+                      </div>                    
+                      </div>
+                    </div>
+                    <div class="modal-footer" style="border-top:0px;background-color:#f6f6f6;">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>             
                 <p id="time">
                     <script type="text/javascript">
                         var date = new Date();  
@@ -112,15 +207,14 @@
             <h4 style="padding-top: 23%; font-weight: bolder;">Products <img src="images/downarrow.png" class="img-responsive" width="20px" height="20px" style="display: inline; margin-left: 7px; height: 25px;"></h4>
         </div>
         
-        <div class="row" style="padding: 0 15px 15px 15px ; ">
-            
+        <div class="row" style="padding: 0 15px 15px 15px ;">            
             <div class="col-sm-6 col-xs-12 sec3_1" style="margin-right: 50px; margin-left: 40px; border-radius: 15px; width: 45%;">
                 <div id="sec3_p1">
                     <h2 style="padding-top: 43%;"><b>Placing Orders</b></h2>
                     <h2 style="margin: 0; font-weight: bolder;"><b>#smartphoneordering</b></h2>
                 </div>
                 <div id="sec3_p1_h" style="display: none; ">
-                    <div class="sec3_layer" style="border-radius: 15px;">
+                    <div class="sec3_layer" style="border-radius: 15px; padding: 44% 0;">
                         <img src="images/mac_silver.png" class="img-responsive" style=" margin:0 auto; height: 36px; margin-bottom: 3%;">
                         <h4 >Place orders at your own convenience.</h4>
                         <h4 style="margin: 0; ">#notforhomedelivery</h4>                    
@@ -200,7 +294,7 @@
             <p>Handle floor operations in the most efficient manner .</p>
         </div>
        
-        <div class="row how">
+        <div class="row how" id="how">
             <h2>How it works?</h2>
             <img src="images/clipboard.png" class="img-responsive" style="margin: auto; height: 100px; margin-top: 3%;"> 
             <p >
@@ -227,8 +321,8 @@
         <div class="row" style="background-color: #000; color: #fff; padding: 7%; text-align: center; font-size: 20px;">
             “What we propose to restaurants, is having a mix of both worlds (Manual & <br>Smartphone ordering) for the customer.”
         </div>
-        <div class="movies">
-            <img src="images/round_logo.png" class="img-responsive" style="width: 75px; border-radius: 100%; margin: auto; border: 2px solid #e2e2e2;
+        <div class="movies" id="movies">
+            <img src="images/round_logo.png" class="img-responsive" style="width: 65px; border-radius: 100%; margin: auto; border: 2px solid #e2e2e2;
     background-color: #e2e2e2;">
             <p style="padding-top: 2%;">Other industries where afewtaps would be a natural fit:</p>
             <h2>at the movies!</h2>
@@ -240,7 +334,7 @@
                 <b>Email us</b> your interest and we’ll propose how our product can work best for you.
             </div>
         </div>
-        <div class="buisness">
+        <div class="buisness" id="buisness">
             <div class="layer">
                 <img src="images/bp.png" class="img-responsive" style="margin: auto; height: 70px">
                 <h1 style="text-align: center; ">afewtaps - Business</h1>
@@ -300,8 +394,8 @@
                         </h3>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/afewtaps/"><button style="color: #1cc1ea; padding: 5% 15%; background-color: transparent; border-radius: 15px; box-shadow: none; width: 125px; border:1px solid #1cc1ea;">
-                        <img src="images/plus.png" style="width: 20px; display: inline;" class="img-responsive">&nbsp; &nbsp;<span style="font-size: 18px; padding-top: 1%;">Follow</span>
+                    <a href="https://www.instagram.com/afewtaps/"><button style="color: #1cc1ea; padding: 5% 15%; background-color: transparent; border-radius: 15px; box-shadow: none; width: 125px; border:1px solid #1cc1ea; margin-left: 5%;">
+                        <img src="images/plus.png" style="width: 16px; display: inline;" class="img-responsive">&nbsp; &nbsp;<span style="font-size: 18px; padding-top: 1%;">Follow</span>
                     </button>
                 </li>
                 
@@ -373,6 +467,51 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function validation() {
     
+    var name      = $.trim($("#name").val());
+    var email     = $.trim($("#email").val());
+    var mobile    = $.trim($("#mobile").val());
+    var address   = $.trim($("#address").val());
+    var captcha   = $.trim($("#captcha").val());
+    
+    if (!name)
+        {
+            displayMessage("Name field is required.");
+            return false;
+        }
+        
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if ((! name) || ( ! regex.test(email)))
+        {
+            displayMessage("Email field must contain a valid email address.");
+            return false;
+        }
+    
+    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+    if ( (! filter.test(mobile))  || (mobile.length != 10)) 
+        {
+            displayMessage("Mobile field must contain a valid number.");
+            return false;
+        }
+    
+    if (!address)
+        {
+            displayMessage("Address field is required.");
+            return false;
+        }   
+        
+    if (!captcha)
+        {
+            displayMessage("Captcha field is required.");
+            return false;
+        }   
+    
+    $("#msginfo").removeClass('error').addClass('success').html('just a moment...');
+
+        return false;
+}
+    </script>
 </body>
 </html>

@@ -53,11 +53,25 @@ class HomeController extends Controller
         $feedback=$request->input('feedback');
 
 
-        Mail::send('email_feedback/confirmation', ['name' => $name, 'feedback' => $feedback], function ($m) use ($from) { 
+        Mail::send('email_swift/confirmation', ['name' => $name, 'feedback' => $feedback], function ($m) use ($from) { 
             $m->sender($from, '')->subject('Feedback@afewtaps');
 
             $m->to('ekta30121995@gmail.com', 'Ekta Tiwari');
         });
-        return view('feedback');
+        return view('homepage');
+    }
+    public function loginEmail(Request $request)
+    {
+        $name=$request->input('name');
+        $email=$request->input('email');
+        $mobile_no=$request->input('mobile');
+        $address=$request->input('address');
+        Mail::send('email_swift/loginconfirmation', ['name' => $name, 'email' => $email, 'mobile_no' => $mobile_no, 'address' => $address], function ($m) use ($email) { 
+            $m->sender($email, '')->subject('EstablishmentLogin@afewtaps');
+
+            $m->to('ekta30121995@gmail.com', 'Ekta Tiwari');
+        });
+        return view('homepage');
+
     }
 }

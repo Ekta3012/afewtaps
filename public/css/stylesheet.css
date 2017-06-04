@@ -27,7 +27,7 @@ ul
 	padding-top: 2%;
 }
 .nav>li>a{
-	padding:17px;
+	padding:16px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
@@ -153,7 +153,7 @@ ul
 	text-align: center;
 	font-size: 20px;
 	margin:auto;
-	padding: 12% 12% 2% 12%;
+	padding: 12% 12% 1% 12%;
 }
 .sec2 .fa{
 	padding-bottom: 2%;
@@ -173,7 +173,7 @@ ul
 }
 .sec3_layer{
 	background: rgba(0,0,0,0.5);
-	padding: 40% 0%;
+	padding: 41% 0%;
 }
 .sec3_2{
 	padding-left: 0px;
@@ -236,6 +236,9 @@ ul
 	background-color: #000;
 	color: #fff;
 	padding:2% 4%;
+}
+.footer p{
+	margin-bottom: 0;
 }
 .android{
 	text-align: center;

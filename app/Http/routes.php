@@ -33,6 +33,7 @@ Route::get('/feedback', function () {
     return view('feedback');
 });
 Route::post('/feedback/mail', ['as' => 'feedback.mail','uses' => 'HomeController@sendEmail']);
+Route::post('/establishmentlogin', ['as' => 'establishmentLogin','uses' => 'HomeController@loginEmail']);
 
 Route::get('/faq', 'LA\FaqsController@view');
 /* ================== Homepage + Admin Routes ================== */
