@@ -40,8 +40,8 @@
 						<h4>Accept. Serve. Mark.</h4>
 					</div>
 					<div class="col-sm-6">
-						<img src="images/iphone.png" class="img-responsive" style="height: 70px; display: inline;">
-						<img src="images/iphone.png" class="img-responsive" style="height: 70px; display: inline;">
+						<img src="images/rsz_iphone.png" class="img-responsive" style="height: 70px; display: inline;">
+						<img src="images/rsz_iphone.png" class="img-responsive" style="height: 70px; display: inline;">
 						<h4>Taking Customer Orders</h4>
 						<h4>Type. Enter. Order placed.</h4>
 					</div>
@@ -194,7 +194,7 @@
 					</ul>
 				</div>
 				<div class="col-sm-6">
-					<img src="images/orderstatus.jpg" class="img-responsive" style="height: 200px; margin: 0 auto;">
+					<img src="images/orderstatus.jpg" class="img-responsive" style="height: 300px; margin: 0 auto;">
 				</div>
 				
 			</div>
@@ -215,7 +215,7 @@
 					</ul>
 				</div>
 				<div class="col-sm-6">
-					<img src="images/New.png" class="img-responsive" style="height: 200px; margin: 0 auto;">
+					<img src="images/New.png" class="img-responsive" style="height: 300px; margin: 0 auto;">
 				</div>
 			</div>
 			<div class="li4_content row">
@@ -223,7 +223,7 @@
 					<p >Each order is encrypted with a “Timer”, from the time the customer places the order,until the order has been marked as Complete</p>
 				</div>
 				<div class="col-sm-6">
-					<img src="images/servingtime.jpg" class="img-responsive" style="height: 200px; margin: 0 auto;">
+					<img src="images/servingtime.jpg" class="img-responsive" style="height: 300px; margin: 0 auto;">
 				</div>
 			</div>
 			<div class="li5_content row">
@@ -237,7 +237,7 @@
 					<p >Please Note:The Service employees can reply back to the<br>customer with the expected order delivery time (optional).</p>
 				</div>
 				<div class="col-sm-6">
-					<img src="images/threshold.png" class="img-responsive" style="height: 200px; margin: 0 auto;">
+					<img src="images/threshold.png" class="img-responsive" style="height: 300px; margin: 0 auto;">
 				</div>
 			</div>
 			<div class="li6_content row">
@@ -251,7 +251,7 @@
 					</p>
 				</div>
 				<div class="col-sm-6">
-					<img src="images/lastordernotification.png" class="img-responsive" style="height: 200px; margin: 0 auto;">
+					<img src="images/lastordernotification.png" class="img-responsive" style="height: 300px; margin: 0 auto;">
 				</div>
 			</div>
 		</div>		
@@ -271,8 +271,8 @@
 			        <li><a href="{!! url('/faq'); !!}" style="text-decoration: none; color: #fff;">FAQ</li>
 			        <li><a href="{!! url('/blog'); !!}" style="text-decoration: none; color: #fff;">Blog</a></li>
 			        <li><a href="{!! url('/feedback'); !!}" style="text-decoration: none; color: #fff;">Feedback</a></li>
-			        <li>Privacy</li>
-			        <li>Terms</li>
+			        <li><a href="{!! url('/privacy'); !!}" style="text-decoration: none; color: #fff;">Privacy</a></li>
+                     <li><a href="{!! url('/terms'); !!}" style="text-decoration: none; color: #fff;">Terms</a></li>
 			      </ul>
 				<p style="font-size: 13px;">Copyright © 2017 Think Different Technologies (P) Ltd</p>
 			</div>

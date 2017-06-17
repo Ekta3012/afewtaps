@@ -54,8 +54,8 @@
 			        <li><a href="{!! url('/faq'); !!}" style="text-decoration: none; color: #fff;">FAQ</li>
 			        <li><a href="{!! url('/blog'); !!}" style="text-decoration: none; color: #fff;">Blog</a></li>
 			        <li><a href="{!! url('/feedback'); !!}" style="text-decoration: none; color: #fff;">Feedback</a></li>
-			        <li>Privacy</li>
-			        <li>Terms</li>
+			       <li><a href="{!! url('/privacy'); !!}" style="text-decoration: none; color: #fff;">Privacy</a></li>
+                              <li><a href="{!! url('/terms'); !!}" style="text-decoration: none; color: #fff;">Terms</a></li>
 			      </ul>
 				<p style="font-size: 12px;">Copyright © 2017 Think Different Technologies (P) Ltd</p>
 			</div>

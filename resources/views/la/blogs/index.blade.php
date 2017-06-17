@@ -56,10 +56,8 @@
 			{!! Form::open(['action' => 'LA\BlogsController@store', 'id' => 'blog-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
-                    
-					@la_input($module, 'blog_title')
+                    @la_input($module, 'blog_title',null,null,"form-control summernote")
 					@la_input($module, 'blog',null,null,"form-control summernote")
-					
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -76,15 +74,13 @@
 
 @push('styles')
 <link rel="stylesheet" type="text/css" href="{{ asset('la-assets/plugins/datatables/datatables.min.css') }}"/>
- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
  <link href="{{ URL::asset('css/dist/summernote.css') }}" rel="stylesheet">
-    
-
 @endpush
 
 @push('scripts')
 <script src="{{ asset('la-assets/plugins/datatables/datatables.min.js') }}"></script>
- <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
 <script src="{{ asset('/assets/css/dist/summernote.min.js') }}"></script>
 <script>
 $(function () {
@@ -104,12 +100,11 @@ $(function () {
 	$("#blog-add-form").validate({
 		
 	});
-});
-$(document).ready(function() {
+	$(document).ready(function() {
     $('.summernote').summernote({
       height:300,
     });
 });
-   
+});
 </script>
 @endpush

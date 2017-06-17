@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
 
-class CreateBlogsTable extends Migration
+class CreateTermsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,9 +17,8 @@ class CreateBlogsTable extends Migration
      */
     public function up()
     {
-        Module::generate("Blogs", 'blogs', 'blog', 'fa-cube', [
-            ["blog_title", "Blog Title", "Textarea", false, "", 0, 2500, false],
-            ["blog", "Blog", "Textarea", false, "", 0, 3000, false],
+        Module::generate("Terms", 'terms', 'terms', 'fa-cube', [
+            ["terms", "Terms", "Textarea", false, "", 0, 100000, false],
         ]);
 		
 		/*
@@ -65,8 +64,8 @@ class CreateBlogsTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('blogs')) {
-            Schema::drop('blogs');
+        if (Schema::hasTable('terms')) {
+            Schema::drop('terms');
         }
     }
 }

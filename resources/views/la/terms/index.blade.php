@@ -100,11 +100,11 @@ $(function () {
 	$("#term-add-form").validate({
 		
 	});
-});
-$(document).ready(function() {
+	$(document).ready(function() {
     $('.summernote').summernote({
       height:300,
     });
+});
 });
 </script>
 @endpush

@@ -155,7 +155,12 @@ class PrivaciesController extends Controller
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
 	}
+	public function view()
+	{
+		$privacy=Privacy::all();
 
+    	return view('privacy', ['privacy' => $privacy]);
+	}
 	/**
 	 * Update the specified privacy in storage.
 	 *

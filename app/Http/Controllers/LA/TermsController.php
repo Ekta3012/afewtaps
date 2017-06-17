@@ -201,7 +201,12 @@ class TermsController extends Controller
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
 	}
-	
+	public function view()
+	{
+		$terms=Term::all();
+
+    	return view('terms', ['terms' => $terms]);
+	}
 	/**
 	 * Datatable Ajax fetch
 	 *

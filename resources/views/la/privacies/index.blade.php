@@ -56,7 +56,8 @@
 			{!! Form::open(['action' => 'LA\PrivaciesController@store', 'id' => 'privacy-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
-                   @la_input($module, 'privacy',null,null,"form-control summernote")
+                    @la_input($module, 'privacy',null,null,"form-control summernote")
+					
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -99,11 +100,13 @@ $(function () {
 	$("#privacy-add-form").validate({
 		
 	});
-});
-$(document).ready(function() {
+	$(document).ready(function() {
     $('.summernote').summernote({
       height:300,
+      fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New','Myriad-pro'],
     });
+	   
+});
 });
 </script>
 @endpush

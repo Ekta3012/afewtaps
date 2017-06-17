@@ -148,6 +148,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Dwij\Laraadmin\LAProvider::class,
+        LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
         /*
          * Application Service Providers...
          */

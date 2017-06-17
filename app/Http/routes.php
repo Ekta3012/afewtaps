@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
     return view('homepage');
 });
@@ -34,8 +33,13 @@ Route::get('/feedback', function () {
 });
 Route::post('/feedback/mail', ['as' => 'feedback.mail','uses' => 'HomeController@sendEmail']);
 Route::post('/establishmentlogin', ['as' => 'establishmentLogin','uses' => 'HomeController@loginEmail']);
+Route::post('/restaurantContact', ['as' => 'restaurantContact','uses' => 'HomeController@restaurantContact']);
 
 Route::get('/faq', 'LA\FaqsController@view');
+Route::get('/blog', 'LA\BlogsController@view');
+Route::get('/privacy', 'LA\PrivaciesController@view');
+Route::get('/terms', 'LA\TermsController@view');
+Route::get('/loginestablishment', 'HomeController@view');
 /* ================== Homepage + Admin Routes ================== */
 
 require __DIR__.'/admin_routes.php';

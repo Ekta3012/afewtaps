@@ -26,15 +26,14 @@
 
 </head>
 <body>
+<div class="header_top">
+	<img src="{!!asset('images/logon.png')!!}" class="img-responsive" style="margin: auto;">
+</div>
 <div class="container-fluid blog">
-	@foreach ($blogs as $blog)
+	@foreach ($privacy as $privacies)
      <div>
-     	<img src="{!!asset('images/round_logo.png')!!}" class="center-block img-responsive" style="width: 65px; border-radius: 100%; border: 2px solid #e2e2e2; background-color: #e2e2e2;">
-     	{!! $blog->blog_title !!}
-     </div>
-     <div>
-     	 {!! $blog->blog !!}
-     </div>           
+     	{!! $privacies->privacy !!}
+     </div>         
 @endforeach
 </div>
 <div class="row footer" style="margin-left: 0; margin-right: 0;">
@@ -50,7 +49,7 @@
 		        <li><a href="{!! url('/faq'); !!}" style="text-decoration: none; color: #fff;">FAQ</li>
 		        <li><a href="{!! url('/blog'); !!}" style="text-decoration: none; color: #fff;">Blog</a></li>
 		        <li><a href="{!! url('/feedback'); !!}" style="text-decoration: none; color: #fff;">Feedback</a></li>
-		       <li><a href="{!! url('/privacy'); !!}" style="text-decoration: none; color: #fff;">Privacy</a></li>
+		        <li><a href="{!! url('/privacy'); !!}" style="text-decoration: none; color: #fff;">Privacy</a></li>
                               <li><a href="{!! url('/terms'); !!}" style="text-decoration: none; color: #fff;">Terms</a></li>
 		      </ul>
 			<p>Copyright © 2017 Think Different Technologies (P) Ltd</p>

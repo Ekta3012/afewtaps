@@ -11,6 +11,7 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -95,11 +96,11 @@
                       <div class="col-md-6">
                       <img src="images/ed.png" class="img-responsive center-block">
                         <p style="text-align:center;color:black;">Establishment Dashboard</p>
-                        <p style="text-align:center;color:#003d59;"><a target="_blank" href="#">Login</a>
+                        <p style="text-align:center;color:#003d59;"><a target="_blank" href="{!! url('/loginestablishment'); !!}">Login</a>
                       </p>                   
                       </div>
                       </div>
-                      <div class="row">                                    
+                      <div>                                    
                         <!-- <form action="#" id="signup" class="form-horizontal" method="post" accept-charset="utf-8" onsubmit="return validation();"> -->
                          {{ Form::open(array('route' => 'establishmentLogin','onsubmit' => 'return validation();')) }}   
                             <p class="text-center" style="color:#333"><strong>New Establishment? Signup here</strong></p>
@@ -140,19 +141,11 @@
                             <div class="form-group row">
                             <label class="col-sm-3 control-label">Captcha</label>
                                 <div class="col-sm-8" id="captchacontainer">
-                                   
+                                   {!! captcha_image_html('ExampleCaptcha') !!}
+                                    <input type="text" id="CaptchaCode" name="CaptchaCode" class="form-control">
                                 </div>
                                 <div class="col-sm-1"></div>
-                            </div>
-                            
-                            <div class="form-group row">
-                            <label class="col-sm-3 control-label">&nbsp;</label>
-                                <div class="col-sm-8">
-                                   <input name="captcha" value="" class="form-control" placeholder="Type number shown in above" type="text" id="captcha" autocomplete="off" />
-                                </div>
-                                <div class="col-sm-1"></div>
-                            </div>
-                            
+                            </div>                            
                             <div class="form-group row">
                                 <div class="col-sm-4 col-sm-offset-4">
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -356,7 +349,7 @@
             </div>          
         </div>
         <div id="form">
-            <form style="padding-top: 8%; padding-bottom:8%; background-color: #EBEEF0; border-radius: 15px;">
+             {{ Form::open(array('route' => 'restaurantContact','id'=>'restaurant_details','onsubmit' => 'return validation();')) }} 
                 <div>
                     <i id="cross" class="fa fa-times" aria-hidden="true" style="color: #fff; background-color: #000; padding: 1%; margin: auto; border-radius: 25px; font-size: 15px; margin-left: 50%;"></i>
                 </div>
@@ -372,13 +365,13 @@
                 <div class="input_box">
                     <input type="text" name="contact_num" placeholder="Contact Number" class="form-control">
                 </div>
-                <div class="input_box">
-                    <textarea class="form-control" rows="3" cols="8" style="background-color: #fff;"></textarea>
-                </div>  
+                <!-- <div class="input_box">
+                    <textarea class="form-control" rows="3" cols="8" name="message" placeholder="Message" style="background-color: #fff;"></textarea>
+                </div>  --> 
                 <div class="input_box" style="padding-left: 8%;">
-                    <input type="submit" name="submit" style="background-color: #000; color: #fff; font-weight: bolder;    padding: 8% 27%;  margin: auto;  font-size: 17px; border-radius: 5px; text-transform: uppercase;">
+                    <input type="submit" name="submit" style="background-color: #000; color: #fff; font-weight: bolder; padding: 8% 27%;  margin: auto;  font-size: 17px; border-radius: 5px; text-transform: uppercase;">
                 </div>  
-            </form>
+            {{ Form::close() }}
         </div>
         <div class="insta row">
             <img src="images/insta.png" class="img-responsive" style="margin: auto; width: 40px;">
@@ -459,8 +452,8 @@
                             <li><a href="{!! url('/faq'); !!}" style="text-decoration: none; color: #fff;">FAQ</a></li>
                             <li><a href="{!! url('/blog'); !!}" style="text-decoration: none; color: #fff;">Blog</a></li>
                             <li><a href="{!! url('/feedback'); !!}" style="text-decoration: none; color: #fff;">Feedback</a></li>
-                            <li>Privacy</li>
-                            <li>Terms</li>
+                             <li><a href="{!! url('/privacy'); !!}" style="text-decoration: none; color: #fff;">Privacy</a></li>
+                              <li><a href="{!! url('/terms'); !!}" style="text-decoration: none; color: #fff;">Terms</a></li>
                         </ul>
                     </div>
                 </div>

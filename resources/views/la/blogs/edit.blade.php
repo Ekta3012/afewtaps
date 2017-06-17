@@ -30,9 +30,7 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				{!! Form::model($blog, ['route' => [config('laraadmin.adminRoute') . '.blogs.update', $blog->id ], 'method'=>'PUT', 'id' => 'blog-edit-form']) !!}
-					<!-- @la_form($module) -->
-					
-					@la_input($module, 'blog_title')
+					@la_input($module, 'blog_title',null,null,"form-control summernote")
 					@la_input($module, 'blog',null,null,"form-control summernote")
                     <br>
 					<div class="form-group">
@@ -45,7 +43,6 @@
 </div>
 
 @endsection
-
 @push('styles')
 
  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
@@ -53,7 +50,6 @@
     
 
 @endpush
-
 @push('scripts')
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
 <script src="{{ asset('/assets/css/dist/summernote.min.js') }}"></script>
@@ -62,11 +58,11 @@ $(function () {
 	$("#blog-edit-form").validate({
 		
 	});
-});
-$(document).ready(function() {
+	$(document).ready(function() {
     $('.summernote').summernote({
       height:300,
     });
+});
 });
 </script>
 @endpush

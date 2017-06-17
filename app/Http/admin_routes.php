@@ -71,13 +71,7 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
 
-	/* ================== Blogs ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/blogs', 'LA\BlogsController');
-	Route::get(config('laraadmin.adminRoute') . '/blog_dt_ajax', 'LA\BlogsController@dtajax');
 
-	/* ================== Blogs ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/blogs', 'LA\BlogsController');
-	Route::get(config('laraadmin.adminRoute') . '/blog_dt_ajax', 'LA\BlogsController@dtajax');
 
 	/* ================== Faqs ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/faqs', 'LA\FaqsController');
@@ -87,17 +81,29 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::resource(config('laraadmin.adminRoute') . '/faqs', 'LA\FaqsController');
 	Route::get(config('laraadmin.adminRoute') . '/faq_dt_ajax', 'LA\FaqsController@dtajax');
 
-	/* ================== Privacies ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/privacies', 'LA\PrivaciesController');
-	Route::get(config('laraadmin.adminRoute') . '/privacy_dt_ajax', 'LA\PrivaciesController@dtajax');
 
-	/* ================== Privacies ================== */
-	Route::resource(config('laraadmin.adminRoute') . '/privacies', 'LA\PrivaciesController');
-	Route::get(config('laraadmin.adminRoute') . '/privacy_dt_ajax', 'LA\PrivaciesController@dtajax');
+
+
+
+	/* ================== Blogs ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/blogs', 'LA\BlogsController');
+	Route::get(config('laraadmin.adminRoute') . '/blog_dt_ajax', 'LA\BlogsController@dtajax');
 
 	/* ================== Terms ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/terms', 'LA\TermsController');
 	Route::get(config('laraadmin.adminRoute') . '/term_dt_ajax', 'LA\TermsController@dtajax');
+
+	/* ================== Privacies ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/privacies', 'LA\PrivaciesController');
+	Route::get(config('laraadmin.adminRoute') . '/privacy_dt_ajax', 'LA\PrivaciesController@dtajax');
+
+	/* ================== Blogs ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/blogs', 'LA\BlogsController');
+	Route::get(config('laraadmin.adminRoute') . '/blog_dt_ajax', 'LA\BlogsController@dtajax');
+
+	/* ================== Privacies ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/privacies', 'LA\PrivaciesController');
+	Route::get(config('laraadmin.adminRoute') . '/privacy_dt_ajax', 'LA\PrivaciesController@dtajax');
 
 	/* ================== Terms ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/terms', 'LA\TermsController');

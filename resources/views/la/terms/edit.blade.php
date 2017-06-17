@@ -44,8 +44,11 @@
 
 @endsection
 @push('styles')
+
  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
- <link href="{{ URL::asset('css/dist/summernote.css') }}" rel="stylesheet">  
+ <link href="{{ URL::asset('css/dist/summernote.css') }}" rel="stylesheet">
+    
+
 @endpush
 @push('scripts')
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
@@ -55,11 +58,11 @@ $(function () {
 	$("#term-edit-form").validate({
 		
 	});
-});
-$(document).ready(function() {
+	$(document).ready(function() {
     $('.summernote').summernote({
       height:300,
     });
+});
 });
 </script>
 @endpush

@@ -31,6 +31,7 @@
 			<div class="col-md-8 col-md-offset-2">
 				{!! Form::model($privacy, ['route' => [config('laraadmin.adminRoute') . '.privacies.update', $privacy->id ], 'method'=>'PUT', 'id' => 'privacy-edit-form']) !!}
 					@la_input($module, 'privacy',null,null,"form-control summernote")
+					
                     <br>
 					<div class="form-group">
 						{!! Form::submit( 'Update', ['class'=>'btn btn-success']) !!} <button class="btn btn-default pull-right"><a href="{{ url(config('laraadmin.adminRoute') . '/privacies') }}">Cancel</a></button>
@@ -43,8 +44,11 @@
 
 @endsection
 @push('styles')
+
  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
- <link href="{{ URL::asset('css/dist/summernote.css') }}" rel="stylesheet">  
+ <link href="{{ URL::asset('css/dist/summernote.css') }}" rel="stylesheet">
+    
+
 @endpush
 @push('scripts')
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
@@ -54,11 +58,11 @@ $(function () {
 	$("#privacy-edit-form").validate({
 		
 	});
-});
-$(document).ready(function() {
+	$(document).ready(function() {
     $('.summernote').summernote({
       height:300,
     });
+});
 });
 </script>
 @endpush

@@ -22,7 +22,7 @@ use App\Models\Blog;
 class BlogsController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'blog';
+	public $view_col = 'blog_title';
 	public $listing_cols = ['id', 'blog_title', 'blog'];
 	
 	public function __construct() {
@@ -201,7 +201,12 @@ class BlogsController extends Controller
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
 	}
-	
+	public function view()
+	{
+		$blogs=Blog::all();
+
+    	return view('blog', ['blogs' => $blogs]);
+	}
 	/**
 	 * Datatable Ajax fetch
 	 *
